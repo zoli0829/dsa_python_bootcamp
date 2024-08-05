@@ -86,3 +86,68 @@ myList2.remove('x') # o(n)
 print(myList2)
 print(myList2)
 # space complexity for all these delete methods is o(1)
+
+# Searching for an element in a list
+print('SEARCHING')
+my_list3 = [10,20,30,40,50,60,70,80,90]
+#in operator
+target = 50
+if target in my_list3: # time complexity o(n)
+    print(f"{target} is in the list")
+else:
+    print(f"{target} is not in the list")
+
+# linear search
+print('LINEAR SEARCH')
+
+def linear_search(p_list, p_target):
+    for i, value in enumerate(p_list): # time complexity o(n)
+        if value == p_target: # o(1)
+            return i # o(1)
+    return -1 # o(1)
+# space complexity is o(1) because an extra space is not required to perform this operation
+
+print(linear_search(my_list3, target))
+
+# List operations / functios
+print('Concatenation with + operator:')
+a = [1,2,3]
+b = [4,5,6]
+c = a + b
+print(c)
+
+print('* operator')
+a = [0]
+a = a * 4
+print(a)
+
+# len()
+print('len()')
+a = [0,1,2,3,4,5,6,]
+print(len(a))
+
+# max()
+print('max()')
+print(max(a))
+
+# min()
+print('min()')
+print(min(a))
+
+# sum()
+print('sum()')
+print(sum(a))
+
+# find the average
+print('find average')
+print(sum(a) / len(a))
+
+new_list = list()
+while (True):
+    inp = input('Enter a number: ')
+    if inp == 'done': break
+    value = float(inp)
+    new_list.append(value)
+average = sum(new_list) / len(new_list)
+
+print('Average:', average)
