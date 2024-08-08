@@ -143,11 +143,42 @@ print('find average')
 print(sum(a) / len(a))
 
 new_list = list()
+'''
 while (True):
     inp = input('Enter a number: ')
     if inp == 'done': break
     value = float(inp)
     new_list.append(value)
 average = sum(new_list) / len(new_list)
+'''
 
-print('Average:', average)
+#print('Average:', average)
+
+# Strings and Lists
+print('STRINGS AND LISTS')
+a = 'spam'
+b = list(a)
+print(b)
+
+a = 'spam spam spam'
+b = list(a)
+b = a.split()
+print(b)
+
+a = 'spam-spam1-spam2'
+delimiter = '-'
+b = a.split(delimiter)
+print(b)
+
+delimiter = 'a'
+b = a.split(delimiter)
+delimiter.join(b)
+print(b)
+
+# Pitfalls and ways to avoid them
+print('PITFALLS')
+myList = [2,4,3,1,5,7]
+orig = myList[:]
+myList.sort() # --> returns none
+print(orig)
+print(myList)
